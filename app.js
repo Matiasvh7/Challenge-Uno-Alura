@@ -6,11 +6,11 @@ let inputAmigo = document.getElementById("amigo");
 let ulResultado = document.getElementById("resultado")
 
 function agregarAmigo() {
-    if (inputAmigo.value == "" || !/^[a-zA-Z\s]+$/.test(inputAmigo.value)) {
+    if (inputAmigo.value == "") {
         alert("Ingresa un nombre valido.");
     } 
     else if (listaAmigos.includes(inputAmigo.value)) {
-        alert("Este nombre ya está en la lista."); 
+        alert("Este nombre ya está en la lista."); // Evita duplicados
     }
     else {
         listaAmigos.push(inputAmigo.value);
