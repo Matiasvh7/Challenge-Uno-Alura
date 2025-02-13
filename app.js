@@ -8,7 +8,11 @@ let ulResultado = document.getElementById("resultado")
 function agregarAmigo() {
     if (inputAmigo.value == "" || !/^[a-zA-Z\s]+$/.test(inputAmigo.value)) {
         alert("Ingresa un nombre valido.");
-    } else {
+    } 
+    else if (listaAmigos.includes(inputAmigo.value)) {
+        alert("Este nombre ya está en la lista."); 
+    }
+    else {
         listaAmigos.push(inputAmigo.value);
         ulListaAmigos.innerHTML += `<li>${inputAmigo.value}</li>`;
         inputAmigo.value = "";
